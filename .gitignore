@@ -1,0 +1,42 @@
+# ────────────────────────────────
+# 🌍 Terraform Best Practice Ignore
+# ────────────────────────────────
+
+# Local Terraform directories
+.terraform/
+.terraform.lock.hcl
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Override and debug files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Plan output files
+*.plan
+terraform.tfplan
+
+# Local environment or backend config
+backend.tfvars
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
