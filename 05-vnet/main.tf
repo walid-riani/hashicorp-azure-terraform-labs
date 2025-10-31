@@ -1,6 +1,8 @@
 resource "azurerm_virtual_network" "vnet" {
-  name                = "${var.prefix}-vnet"
-  address_space       = ["10.0.0.0/16"]
-  location            = var.location
-  resource_group_name = var.resource_group_name
+  name          = "${var.prefix}-vnet"
+  address_space = var.address_space
+
+  # haal dynamisch info van de RG module (01-resource-group)
+  location            = data.terraform_remote_state.rg.outputs.resource_group_location
+  resource_group_name = data.terraform_remote_state.rg.outputs.resource_group_name
 }
