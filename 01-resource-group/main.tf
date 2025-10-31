@@ -1,5 +1,9 @@
 resource "azurerm_resource_group" "rg" {
-  name = "${var.prefix}-rg-demo"
-  # In Terraform/ARM is de display name correct: "West Europe"
+  name     = "${var.prefix}-rg-demo"
   location = var.location
+
+  tags = {
+    Environment = "Terraform Getting Started"
+    Team        = "DevOps"
+  }
 }
